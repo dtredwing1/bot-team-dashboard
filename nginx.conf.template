@@ -1,0 +1,9 @@
+server {
+  listen ${PORT};
+  root /usr/share/nginx/html;
+  server_tokens off;
+  add_header X-Content-Type-Options nosniff always;
+  add_header Referrer-Policy no-referrer always;
+  location / { try_files $uri $uri/ =404; }
+  location /data/ { add_header Cache-Control "no-cache"; }
+}

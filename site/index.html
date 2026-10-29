@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Alan’s Bot Team</title>
+<meta name="description" content="Who’s on my team of Grok Bots, what each one is doing, and ideas you can borrow.">
+<link rel="canonical" href="https://bots.themottfamily.net/">
+<meta property="og:url" content="https://bots.themottfamily.net/">
+<meta property="og:title" content="Alan’s Bot Team">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main>
+<header><h1 id="title">Alan’s Bot Team</h1><p id="summary" class="muted"></p>
+<nav aria-label="Contents"><a href="#glance">At a glance</a><a href="#bots">All bots</a><a href="#together">How the bots work together</a><a href="#highlights">Highlights by team</a><a href="#ideas">Ideas to steal</a></nav></header>
+<section id="glance"><h2>At a glance</h2><p id="intro"></p><div id="metrics" class="metrics"></div></section>
+<section id="bots"><h2>All bots</h2><p id="status-note" class="muted small"></p>
+<div class="controls"><label>Team <select id="team"><option value="All">All</option></select></label>
+<div class="seg" role="group" aria-label="Sort"><button data-sort="recent" aria-pressed="true">Most recent</button><button data-sort="team" aria-pressed="false">By team</button><button data-sort="name" aria-pressed="false">A–Z</button></div>
+<span id="count" class="muted small"></span></div>
+<div class="table-wrap"><table><thead><tr><th>Bot</th><th>Team</th><th>Role</th><th>Now / last working on</th><th>Last active</th><th>Status</th></tr></thead><tbody id="rows"></tbody></table></div></section>
+<section id="together"><h2>How the bots work together</h2><div id="diagram" class="diagram"></div><p id="caption"></p></section>
+<section id="highlights"><h2>Highlights by team</h2><div id="teams" class="cards"></div></section>
+<section id="ideas"><h2>Ideas to steal</h2><ol id="idea-list" class="ideas"></ol><aside id="tip" class="callout"></aside></section>
+<footer class="muted small">As of <span id="asof"></span>. Read-only.</footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

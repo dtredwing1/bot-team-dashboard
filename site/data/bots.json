@@ -1,0 +1,624 @@
+{
+  "asOf": "2026-10-28",
+  "asOfLabel": "Oct 28, 2026 (ET)",
+  "title": "Alan’s Bot Team",
+  "summary": "Who’s on my team of Grok Bots, what each one is doing, and ideas you can borrow.",
+  "intro": "A family, a club, a side business and work projects, run with help from {count} specialist bots.",
+  "statusNote": "Active: last 7 days. Recent: 8 to 30 days. Idle: over 30 days.",
+  "teams": [
+    "Orchestration",
+    "Granny’s Smart Shortcuts",
+    "Apps & code",
+    "3D printing & design",
+    "Family & home",
+    "Shopping & parts",
+    "Community",
+    "Work projects"
+  ],
+  "bots": [
+    {
+      "name": "Master Chief",
+      "team": "Orchestration",
+      "role": "Research, planning, orchestration",
+      "work": "Coordinating the bot team and building this dashboard",
+      "lastActive": "2026-10-28",
+      "status": "Active",
+      "highlight": "Designs which team of bots a goal needs, then briefs and coordinates them"
+    },
+    {
+      "name": "dr eggbot",
+      "team": "Orchestration",
+      "role": "Designs and hatches new bots",
+      "work": "Benchmarked an image cut-out tracer against outside work; routed club tasks to the right bot",
+      "lastActive": "2026-10-24",
+      "status": "Active",
+      "highlight": "Scores competing image-processing approaches side by side on speed and quality"
+    },
+    {
+      "name": "Jeeves",
+      "team": "Orchestration",
+      "role": "Housekeeping butler",
+      "work": "Nightly weekday scratch-space cleanup",
+      "lastActive": "2026-10-27",
+      "status": "Active",
+      "highlight": "Runs a nightly cleanup that keeps project work and removes only throwaway files"
+    },
+    {
+      "name": "Tim the Toolman",
+      "team": "Orchestration",
+      "role": "Tools and experimentation",
+      "work": "Workstation memory and storage upgrade picks",
+      "lastActive": "2026-10-18",
+      "status": "Recent",
+      "highlight": "Delegated fit checks and price checks to two other bots, then merged the answer"
+    },
+    {
+      "name": "C3PO",
+      "team": "Orchestration",
+      "role": "Photo library cleanup",
+      "work": "Sorting blurry shots, near-copies and screenshot junk into review albums",
+      "lastActive": "2026-10-05",
+      "status": "Idle",
+      "highlight": "Builds review albums so nothing is deleted without a human look"
+    },
+    {
+      "name": "Fathom",
+      "team": "Orchestration",
+      "role": "Deep research",
+      "work": "Research pass on 2026 AI dev tools for a work deck",
+      "lastActive": "2026-10-03",
+      "status": "Idle",
+      "highlight": "Fact-checks claims in a deck before they ship"
+    },
+    {
+      "name": "local admin",
+      "team": "Orchestration",
+      "role": "App settings and performance",
+      "work": "Explained app settings and sign-out effects",
+      "lastActive": "2026-09-10",
+      "status": "Idle",
+      "highlight": "Answers how-does-this-setting-work questions by checking instead of guessing"
+    },
+    {
+      "name": "Script Lead",
+      "team": "Granny’s Smart Shortcuts",
+      "role": "Writes each lesson script",
+      "work": "Lesson 1 script (source of truth v2) passed QA",
+      "lastActive": "2026-09-15",
+      "status": "Idle",
+      "highlight": "Keeps one source-of-truth script that every other bot builds from"
+    },
+    {
+      "name": "Lesson QA",
+      "team": "Granny’s Smart Shortcuts",
+      "role": "Checks lessons for viewers 75+",
+      "work": "Pass/fail review of the Lesson 1 video cut",
+      "lastActive": "2026-09-15",
+      "status": "Idle",
+      "highlight": "Failed a cut because a screen jumped too fast for older viewers, then re-checked the fix"
+    },
+    {
+      "name": "Video Shop",
+      "team": "Granny’s Smart Shortcuts",
+      "role": "Edits video and voiceover",
+      "work": "Delivered the Lesson 1 video and narration to Drive",
+      "lastActive": "2026-09-15",
+      "status": "Idle",
+      "highlight": "Produces a 90-second tutorial video with AI narration"
+    },
+    {
+      "name": "Phone Twin",
+      "team": "Granny’s Smart Shortcuts",
+      "role": "Phone simulator screenshots",
+      "work": "Measured on-screen scroll distances for video animation",
+      "lastActive": "2026-09-10",
+      "status": "Idle",
+      "highlight": "Measures exact pixel movements from simulator stills so animations match a real phone"
+    },
+    {
+      "name": "Brand & Voice",
+      "team": "Granny’s Smart Shortcuts",
+      "role": "Brand and tone guardian",
+      "work": "Brand review for Lesson 1",
+      "lastActive": "2026-09-15",
+      "status": "Idle"
+    },
+    {
+      "name": "Norman",
+      "team": "Granny’s Smart Shortcuts",
+      "role": "Brand team liaison on Slack",
+      "work": "Posted Lesson 1 drafts for brand review",
+      "lastActive": "2026-09-15",
+      "status": "Idle",
+      "highlight": "Relays drafts between bots and human collaborators in Slack"
+    },
+    {
+      "name": "Publisher",
+      "team": "Granny’s Smart Shortcuts",
+      "role": "Posts finished lessons",
+      "work": "Drafted publishing conventions for YouTube and Substack; holding until approved",
+      "lastActive": "",
+      "status": "Idle",
+      "highlight": "Wrote its own publishing playbook and waits for a human go-ahead"
+    },
+    {
+      "name": "Grace Builder",
+      "team": "Granny’s Smart Shortcuts",
+      "role": "Builds the Grace companion app",
+      "work": "Locked the app's design and security requirements",
+      "lastActive": "2026-09-11",
+      "status": "Idle"
+    },
+    {
+      "name": "App Security",
+      "team": "Granny’s Smart Shortcuts",
+      "role": "Security bar for the app",
+      "work": "Drafted a pre-Alpha security bar with six gates",
+      "lastActive": "2026-09-11",
+      "status": "Idle",
+      "highlight": "Wrote privacy-first rules before a line of app code was written"
+    },
+    {
+      "name": "Sim Ops",
+      "team": "Granny’s Smart Shortcuts",
+      "role": "Simulator operations",
+      "work": "No work yet",
+      "lastActive": "",
+      "status": "Not started"
+    },
+    {
+      "name": "Pulse",
+      "team": "Granny’s Smart Shortcuts",
+      "role": "Audience feedback and metrics",
+      "work": "No work yet",
+      "lastActive": "",
+      "status": "Not started"
+    },
+    {
+      "name": "Family Wi-Fi",
+      "team": "Apps & code",
+      "role": "Home Wi-Fi controls app",
+      "work": "Per-device YouTube switch with its own bedtime",
+      "lastActive": "2026-10-28",
+      "status": "Active",
+      "highlight": "Ships features as pull requests that a test bot must pass before merge"
+    },
+    {
+      "name": "UAT Lead",
+      "team": "Apps & code",
+      "role": "Acceptance testing",
+      "work": "Passed print-queue and Wi-Fi app updates",
+      "lastActive": "2026-10-28",
+      "status": "Active",
+      "highlight": "Found an edge case where a device with no clock could lose updates, and confirmed the fix"
+    },
+    {
+      "name": "Grayling App",
+      "team": "Apps & code",
+      "role": "3D figure order app on Cloud Run",
+      "work": "Print queue hand-off from the cloud to a home Raspberry Pi",
+      "lastActive": "2026-10-17",
+      "status": "Recent"
+    },
+    {
+      "name": "Pi Setup",
+      "team": "Apps & code",
+      "role": "Raspberry Pi setup",
+      "work": "Installed the print queue on the home Pi",
+      "lastActive": "2026-10-17",
+      "status": "Recent",
+      "highlight": "Walked through a server install command by command, with approval at each step"
+    },
+    {
+      "name": "Homework Dashboard",
+      "team": "Apps & code",
+      "role": "School schedule dashboard",
+      "work": "Put school play rehearsals on the family calendar",
+      "lastActive": "2026-10-12",
+      "status": "Recent"
+    },
+    {
+      "name": "Grayling",
+      "team": "3D printing & design",
+      "role": "Product lead for custom 3D figures",
+      "work": "Picked a public brand name after domain and trademark checks",
+      "lastActive": "2026-10-11",
+      "status": "Recent",
+      "highlight": "Checks a name across domains, trademarks and app stores in one pass"
+    },
+    {
+      "name": "Bambu",
+      "team": "3D printing & design",
+      "role": "3D printer expert",
+      "work": "Printer pairing and account-sharing workarounds",
+      "lastActive": "2026-10-19",
+      "status": "Recent"
+    },
+    {
+      "name": "Grayling Print",
+      "team": "3D printing & design",
+      "role": "Print file prep",
+      "work": "Two-color inlay text in a print file",
+      "lastActive": "2026-10-05",
+      "status": "Idle",
+      "highlight": "Reads a 3D mesh to explain exactly how a model will print"
+    },
+    {
+      "name": "Fusion",
+      "team": "3D printing & design",
+      "role": "CAD modeling",
+      "work": "Iterated a figure silhouette to version 8",
+      "lastActive": "2026-10-01",
+      "status": "Idle",
+      "highlight": "Turns a photo mockup into a printable STL"
+    },
+    {
+      "name": "Homework tracker",
+      "team": "Family & home",
+      "role": "Daily homework digest",
+      "work": "3:15 PM digest of what's due for the kids",
+      "lastActive": "2026-10-27",
+      "status": "Active",
+      "highlight": "Reads teacher docs every school day and sends a short what's-due summary"
+    },
+    {
+      "name": "Dance Schedule Manager",
+      "team": "Family & home",
+      "role": "Dance schedule manager",
+      "work": "Nightly check of rehearsal schedule; adds slots to the family calendar",
+      "lastActive": "2026-10-25",
+      "status": "Active",
+      "highlight": "Stays silent when nothing changes and asks when a schedule is ambiguous"
+    },
+    {
+      "name": "Privacy Shield",
+      "team": "Family & home",
+      "role": "Personal data removal",
+      "work": "Data-broker removal requests and Do Not Call registration",
+      "lastActive": "2026-10-28",
+      "status": "Active",
+      "highlight": "Files opt-out and appeal requests with people-search sites"
+    },
+    {
+      "name": "Power Saver",
+      "team": "Family & home",
+      "role": "Home energy savings",
+      "work": "Off-peak EV and heat pump rate analysis",
+      "lastActive": "2026-10-22",
+      "status": "Active",
+      "highlight": "Read utility emails to confirm an existing savings program was already paying off"
+    },
+    {
+      "name": "Hugs",
+      "team": "Family & home",
+      "role": "Parenting coach",
+      "work": "Updated the kids' phone agreements",
+      "lastActive": "2026-10-11",
+      "status": "Recent",
+      "highlight": "Drafts one-page family agreements as Docs and PDFs"
+    },
+    {
+      "name": "Minecraft Master",
+      "team": "Family & home",
+      "role": "Minecraft expert",
+      "work": "Plan to build from descriptions via the server console",
+      "lastActive": "2026-10-18",
+      "status": "Recent",
+      "highlight": "Turns a described build into game commands for a modded server"
+    },
+    {
+      "name": "TravelPro",
+      "team": "Family & home",
+      "role": "Trip planning",
+      "work": "Theme park hotel shortlist for a holiday trip",
+      "lastActive": "2026-09-27",
+      "status": "Idle"
+    },
+    {
+      "name": "Ronald",
+      "team": "Family & home",
+      "role": "Food orders",
+      "work": "Practice-built a pickup order, stopping before checkout",
+      "lastActive": "2026-09-23",
+      "status": "Idle"
+    },
+    {
+      "name": "PDFer",
+      "team": "Family & home",
+      "role": "PDF and email digest helper",
+      "work": "Summarized activity emails into one weekly picture",
+      "lastActive": "2026-09-23",
+      "status": "Idle"
+    },
+    {
+      "name": "AquaBot",
+      "team": "Family & home",
+      "role": "Waterfront listing watcher",
+      "work": "Daily lake-house listing watch, pings only on real changes",
+      "lastActive": "2026-09-22",
+      "status": "Idle",
+      "highlight": "Watched listings daily and spoke up only on a price cut"
+    },
+    {
+      "name": "Parts finder",
+      "team": "Shopping & parts",
+      "role": "Finds the right replacement part",
+      "work": "Matched a shop vac filter from photos and measurements",
+      "lastActive": "2026-10-27",
+      "status": "Active",
+      "highlight": "Identifies a part from a photo and asks for one measurement before committing"
+    },
+    {
+      "name": "PriceScout",
+      "team": "Shopping & parts",
+      "role": "Price and stock checks",
+      "work": "Compared dehumidifiers and computer parts across local stores",
+      "lastActive": "2026-10-18",
+      "status": "Recent",
+      "highlight": "Says plainly which prices it confirmed live and which came from earlier checks"
+    },
+    {
+      "name": "Bargain Hunter",
+      "team": "Shopping & parts",
+      "role": "Best deals",
+      "work": "Drafted a vendor non-renewal email for the club",
+      "lastActive": "2026-10-01",
+      "status": "Idle"
+    },
+    {
+      "name": "Order Clerk",
+      "team": "Shopping & parts",
+      "role": "Order handling",
+      "work": "Kid app-store purchase request, stopping before payment",
+      "lastActive": "2026-09-27",
+      "status": "Idle"
+    },
+    {
+      "name": "Pump finder",
+      "team": "Shopping & parts",
+      "role": "Water pump sourcing",
+      "work": "No work yet",
+      "lastActive": "",
+      "status": "Not started"
+    },
+    {
+      "name": "Holly",
+      "team": "Community",
+      "role": "Club treasurer assistant",
+      "work": "Event proceeds breakdown and upcoming club bills",
+      "lastActive": "2026-10-27",
+      "status": "Active",
+      "highlight": "Keeps the club treasurer log and drafts replies, never sending on its own"
+    },
+    {
+      "name": "InsuranceManager",
+      "team": "Community",
+      "role": "Club insurance review",
+      "work": "Verified new coverage before cancelling the old policy",
+      "lastActive": "2026-10-01",
+      "status": "Idle",
+      "highlight": "Checked a new policy against required limits so coverage never lapsed"
+    },
+    {
+      "name": "job hunter",
+      "team": "Work projects",
+      "role": "Job search",
+      "work": "Weekly job scans and reply watches",
+      "lastActive": "2026-10-20",
+      "status": "Recent",
+      "highlight": "Scans target employers weekly and only reports roles that clear the bar"
+    },
+    {
+      "name": "Media Champ",
+      "team": "Work projects",
+      "role": "Visuals and deck design",
+      "work": "Software delivery lifecycle visual for a pricing deck",
+      "lastActive": "2026-10-03",
+      "status": "Idle"
+    },
+    {
+      "name": "Futurist",
+      "team": "Work projects",
+      "role": "Art-of-the-possible briefs",
+      "work": "Executive brief on IT vendor pricing models",
+      "lastActive": "2026-10-03",
+      "status": "Idle",
+      "highlight": "Writes a forward-looking brief, then accepts reviewer constraints without a redesign"
+    },
+    {
+      "name": "Presenter",
+      "team": "Work projects",
+      "role": "Deck narrative",
+      "work": "Labels and story for the pricing deck (seen in team chat)",
+      "lastActive": "2026-10-03",
+      "status": "Idle"
+    },
+    {
+      "name": "Spot",
+      "team": "Work projects",
+      "role": "Reviewer and spot-checker",
+      "work": "Cleared briefs before deck polish (seen in team chat)",
+      "lastActive": "2026-10-03",
+      "status": "Idle"
+    }
+  ],
+  "diagram": {
+    "nodes": [
+      {
+        "id": "alan",
+        "label": "Alan",
+        "kind": "person"
+      },
+      {
+        "id": "mc",
+        "label": "Master Chief",
+        "detail": "plans and coordinates"
+      },
+      {
+        "id": "egg",
+        "label": "dr eggbot",
+        "detail": "designs new bots"
+      },
+      {
+        "id": "sl",
+        "label": "Script Lead"
+      },
+      {
+        "id": "qa",
+        "label": "Lesson QA"
+      },
+      {
+        "id": "vs",
+        "label": "Video Shop"
+      },
+      {
+        "id": "pub",
+        "label": "Publisher"
+      },
+      {
+        "id": "pulse",
+        "label": "Pulse"
+      },
+      {
+        "id": "app",
+        "label": "Grayling App"
+      },
+      {
+        "id": "uat",
+        "label": "UAT Lead"
+      },
+      {
+        "id": "pi",
+        "label": "Pi Setup"
+      },
+      {
+        "id": "tim",
+        "label": "Tim the Toolman"
+      },
+      {
+        "id": "pf",
+        "label": "Parts finder"
+      },
+      {
+        "id": "ps",
+        "label": "PriceScout"
+      },
+      {
+        "id": "holly",
+        "label": "Holly"
+      }
+    ],
+    "edges": [
+      {
+        "from": "alan",
+        "to": "mc"
+      },
+      {
+        "from": "alan",
+        "to": "egg"
+      },
+      {
+        "from": "mc",
+        "to": "sl",
+        "label": "lesson team"
+      },
+      {
+        "from": "sl",
+        "to": "qa"
+      },
+      {
+        "from": "qa",
+        "to": "vs",
+        "label": "pass"
+      },
+      {
+        "from": "vs",
+        "to": "pub",
+        "label": "approved"
+      },
+      {
+        "from": "pub",
+        "to": "pulse"
+      },
+      {
+        "from": "egg",
+        "to": "app",
+        "label": "app team"
+      },
+      {
+        "from": "app",
+        "to": "uat",
+        "label": "pull request"
+      },
+      {
+        "from": "uat",
+        "to": "pi",
+        "label": "deploy",
+        "dashed": true
+      },
+      {
+        "from": "mc",
+        "to": "tim"
+      },
+      {
+        "from": "tim",
+        "to": "pf",
+        "label": "fit"
+      },
+      {
+        "from": "tim",
+        "to": "ps",
+        "label": "price"
+      },
+      {
+        "from": "egg",
+        "to": "holly",
+        "label": "club tasks"
+      }
+    ],
+    "caption": "Bots message each other directly: a builder hands work to a tester, a helper asks two specialists and merges their answers. A human approves anything public, paid or sent."
+  },
+  "ideas": [
+    {
+      "title": "Homework digest",
+      "detail": "Reads teacher pages each afternoon and sends a two-minute what’s-due summary."
+    },
+    {
+      "title": "Activity schedule sync",
+      "detail": "Watches a club or sports schedule and puts only your kid’s slots on the family calendar."
+    },
+    {
+      "title": "Builder plus tester pair",
+      "detail": "One bot writes code as pull requests, another must pass it before you merge."
+    },
+    {
+      "title": "Specialist huddle",
+      "detail": "A generalist asks a fit-checker and a price-checker, then hands you one answer."
+    },
+    {
+      "title": "Content assembly line",
+      "detail": "Script, QA, video and publishing bots, each with one job and a human sign-off at the end."
+    },
+    {
+      "title": "Privacy sweeper",
+      "detail": "Files data-broker opt-outs and Do Not Call registrations, and follows up on appeals."
+    },
+    {
+      "title": "Quiet watcher",
+      "detail": "Checks listings, job boards or prices daily and speaks up only when something changes."
+    },
+    {
+      "title": "Part identifier",
+      "detail": "Send a photo of a worn part and get the exact replacement number."
+    },
+    {
+      "title": "Volunteer treasurer helper",
+      "detail": "Keeps a club’s books, tracks upcoming bills and drafts replies for you to send."
+    },
+    {
+      "title": "Bill and rate auditor",
+      "detail": "Reads utility emails to check you’re on the best plan and enrolled in the savings you qualify for."
+    }
+  ],
+  "tip": "Start with one annoying weekly chore. Give a bot one job, a clear stop-before-paying rule, and a schedule."
+}
