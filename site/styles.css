@@ -1,5 +1,5 @@
-:root{--bg:#fff;--fg:#16181d;--muted:#555b66;--card:#f5f6f8;--line:#d9dce2;--accent:#1f5fd1;--ok-bg:#dff3e4;--ok:#11602a;--ac-bg:#e2ebfc;--ac:#1a4aa3;--ne-bg:#eceef1;--ne:#3f4550}
-@media (prefers-color-scheme:dark){:root{--bg:#121417;--fg:#eceef2;--muted:#a7adb8;--card:#1c1f24;--line:#33373f;--accent:#7fb0ff;--ok-bg:#163a22;--ok:#8fe3a7;--ac-bg:#1b2c4d;--ac:#a9c8ff;--ne-bg:#2a2e35;--ne:#c9ced6}}
+:root{--bg:#fff;--fg:#16181d;--muted:#555b66;--card:#f5f6f8;--line:#d9dce2;--accent:#1f5fd1;--ok-bg:#dff3e4;--ok:#11602a;--ac-bg:#e2ebfc;--ac:#1a4aa3;--ne-bg:#eceef1;--ne:#3f4550;--bo-bg:#fff1d6;--bo:#7a4300}
+@media (prefers-color-scheme:dark){:root{--bg:#121417;--fg:#eceef2;--muted:#a7adb8;--card:#1c1f24;--line:#33373f;--accent:#7fb0ff;--ok-bg:#163a22;--ok:#8fe3a7;--ac-bg:#1b2c4d;--ac:#a9c8ff;--ne-bg:#2a2e35;--ne:#c9ced6;--bo-bg:#3d2a0a;--bo:#ffd58a}}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 main{max-width:1200px;margin:0 auto;padding:24px 16px 48px}h1{margin:0 0 4px;font-size:2rem}h2{margin:40px 0 8px;font-size:1.4rem}h3{margin:0 0 8px;font-size:1.05rem}
 .muted{color:var(--muted)}.small{font-size:.875rem}a{color:var(--accent)}
@@ -12,8 +12,8 @@ select,button{font:inherit;color:var(--fg);background:var(--card);border:1px sol
 .seg button[aria-pressed=true]{background:var(--accent);color:var(--bg);border-color:var(--accent)}
 .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
 table{border-collapse:collapse;width:100%;font-size:.93rem}th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}th{background:var(--card);white-space:nowrap}tr:last-child td{border-bottom:0}
-.pill{display:inline-block;padding:1px 8px;border-radius:999px;font-size:.8rem;font-weight:600;white-space:nowrap;background:var(--ne-bg);color:var(--ne)}
-.pill.Active{background:var(--ok-bg);color:var(--ok)}.pill.Recent{background:var(--ac-bg);color:var(--ac)}
+.pill{display:inline-block;padding:1px 8px;border-radius:999px;font-size:.8rem;font-weight:600;max-width:100%;white-space:normal;overflow-wrap:anywhere;line-height:1.35;background:var(--ne-bg);color:var(--ne)}
+.pill.Active{background:var(--ok-bg);color:var(--ok)}.pill.Idle{background:var(--bo-bg);color:var(--bo);border:1px dashed currentColor}.pill.Recent{background:var(--ac-bg);color:var(--ac)}
 .diagram{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--card);padding:8px}
 .diagram svg{display:block;min-width:900px;width:100%;height:auto}
 .diagram .node rect{fill:var(--bg);stroke:var(--line)}.diagram .node.person rect{stroke:var(--accent);stroke-width:2}

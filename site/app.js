@@ -3,7 +3,9 @@
   const $ = (id) => document.getElementById(id);
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
   const fmt = (d) => d ? new Date(d + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric" }) : "—";
-  const pill = (s) => `<span class="pill ${s.replace(/ /g, "")}">${esc(s)}</span>`;
+  const LABEL = D.statusLabels || {};
+  const label = (s) => LABEL[s] || s;
+  const pill = (s) => `<span class="pill ${s.replace(/ /g, "")}">${s === "Idle" ? "😴 " : ""}${esc(label(s))}</span>`;
   const B = D.bots, T = D.teams;
   $("summary").textContent = `${D.summary} As of ${D.asOfLabel}.`;
   $("asof").textContent = D.asOfLabel;
@@ -15,12 +17,16 @@
 
   const sel = $("team");
   T.forEach((t) => sel.add(new Option(t, t)));
+  const ssel = $("status");
+  ["Active", "Recent", "Idle", "Not started"].forEach((s) => ssel.add(new Option(label(s), s)));
+  let status = "All";
+  ssel.onchange = () => { status = ssel.value; render(); };
   let team = new URLSearchParams(location.search).get("team") || "All", sort = "recent";
   if (![...sel.options].some((o) => o.value === team)) team = "All";
   sel.value = team;
   const cols = ["Bot", "Team", "Role", "Now / last working on", "Last active", "Status"];
   function render() {
-    let r = B.filter((b) => team === "All" || b.team === team);
+    let r = B.filter((b) => (team === "All" || b.team === team) && (status === "All" || b.status === status));
     r = [...r].sort((a, b) => sort === "name" ? a.name.localeCompare(b.name) : sort === "team" ? T.indexOf(a.team) - T.indexOf(b.team) : (b.lastActive || "0").localeCompare(a.lastActive || "0"));
     $("rows").innerHTML = r.map((b) => [esc(b.name), esc(b.team), esc(b.role), esc(b.work), fmt(b.lastActive), pill(b.status)]
       .map((c, i) => `<td data-label="${cols[i]}">${c}</td>`).join("")).map((x) => `<tr>${x}</tr>`).join("");
@@ -65,7 +71,7 @@
   $("caption").textContent = D.diagram.caption;
 
   $("teams").innerHTML = T.map((t) => `<div class="card"><h3>${esc(t)}</h3><ul>${B.filter((b) => b.team === t && b.highlight)
-    .map((b) => `<li><b>${esc(b.name)}</b> ${b.status === "Active" ? pill("Active") : `<span class="muted small">${esc(b.status)}</span>`}<br>${esc(b.highlight)}</li>`).join("")}</ul></div>`).join("");
+    .map((b) => `<li><b>${esc(b.name)}</b> ${b.status === "Active" ? pill("Active") : pill(b.status)}<br>${esc(b.highlight)}</li>`).join("")}</ul></div>`).join("");
   $("idea-list").innerHTML = D.ideas.map((i) => `<li><b>${esc(i.title)}</b> — ${esc(i.detail)}</li>`).join("");
   $("tip").textContent = D.tip;
 })();

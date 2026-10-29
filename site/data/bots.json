@@ -4,7 +4,7 @@
   "title": "Alan’s Bot Team",
   "summary": "Who’s on my team of Grok Bots, what each one is doing, and ideas you can borrow.",
   "intro": "A family, a club, a side business and work projects, run with help from {count} specialist bots.",
-  "statusNote": "Active: last 7 days. Recent: 8 to 30 days. Idle: over 30 days.",
+  "statusNote": "Active: last 7 days. Recent: 8 to 30 days. Getting bored, ready for action: over 30 days.",
   "teams": [
     "Orchestration",
     "Granny’s Smart Shortcuts",
@@ -620,5 +620,8 @@
       "detail": "Reads utility emails to check you’re on the best plan and enrolled in the savings you qualify for."
     }
   ],
-  "tip": "Start with one annoying weekly chore. Give a bot one job, a clear stop-before-paying rule, and a schedule."
+  "tip": "Start with one annoying weekly chore. Give a bot one job, a clear stop-before-paying rule, and a schedule.",
+  "statusLabels": {
+    "Idle": "Getting bored, ready for action"
+  }
 }
