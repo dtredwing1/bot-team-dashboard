@@ -1,4 +1,8 @@
 node_modules
 .git
 docs
+scripts
 *.md
+*evidence*
+*handoff*
+*research*

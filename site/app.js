@@ -5,15 +5,29 @@
   const fmt = (d) => d ? new Date(d + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric" }) : "—";
   const LABEL = D.statusLabels || {};
   const label = (s) => LABEL[s] || s;
-  const pill = (s) => `<span class="pill ${s.replace(/ /g, "")}">${s === "Idle" ? "😴 " : ""}${esc(label(s))}</span>`;
+  const pill = (s) => `<span class="pill ${s.replace(/ /g, "")}">${s === "Idle" ? '<span aria-hidden="true">😴</span> ' : ""}${esc(label(s))}</span>`;
+  const workBucket = (b) => /^(Current|Recurring)\b/.test(b.work || "") ? "current" : /^Last\b/.test(b.work || "") ? "last" : "none";
   const B = D.bots, T = D.teams;
+  if (D.title) {
+    $("title").textContent = D.title;
+    document.title = D.title;
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute("content", D.title);
+  }
+  if (D.summary) {
+    const desc = document.querySelector('meta[name="description"]');
+    if (desc) desc.setAttribute("content", D.summary);
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute("content", D.summary);
+  }
   $("summary").textContent = `${D.summary} As of ${D.asOfLabel}.`;
   $("asof").textContent = D.asOfLabel;
   $("intro").textContent = D.intro.replace("{count}", B.length);
   $("status-note").textContent = D.statusNote;
-  const active = B.filter((b) => b.status === "Active").length, recent = B.filter((b) => b.status === "Recent").length;
-  $("metrics").innerHTML = [[B.length, "Bots"], [T.length, "Teams"], [active, "Active in last 7 days"], [active + recent, "Active in last 30 days"]]
-    .map(([v, l]) => `<div class="metric"><b>${v}</b><span class="muted">${l}</span></div>`).join("");
+  const underway = B.filter((b) => workBucket(b) === "current").length;
+  const idle = B.filter((b) => b.status === "Idle").length;
+  $("metrics").innerHTML = [[B.length, "Bots"], [T.length, "Teams"], [underway, "Current or recurring"], [idle, label("Idle")]]
+    .map(([v, l]) => `<div class="metric"><b>${v}</b><span class="muted">${esc(l)}</span></div>`).join("");
 
   const sel = $("team");
   T.forEach((t) => sel.add(new Option(t, t)));
@@ -21,12 +35,15 @@
   ["Active", "Recent", "Idle", "Not started"].forEach((s) => ssel.add(new Option(label(s), s)));
   let status = "All";
   ssel.onchange = () => { status = ssel.value; render(); };
+  const wsel = $("work-view");
+  let workView = "All";
+  wsel.onchange = () => { workView = wsel.value; render(); };
   let team = new URLSearchParams(location.search).get("team") || "All", sort = "recent";
   if (![...sel.options].some((o) => o.value === team)) team = "All";
   sel.value = team;
-  const cols = ["Bot", "Team", "Role", "Now / last working on", "Last active", "Status"];
+  const cols = ["Bot", "Team", "Role", "Current / recurring / last work", "Last active", "Status"];
   function render() {
-    let r = B.filter((b) => (team === "All" || b.team === team) && (status === "All" || b.status === status));
+    let r = B.filter((b) => (team === "All" || b.team === team) && (status === "All" || b.status === status) && (workView === "All" || workBucket(b) === workView));
     r = [...r].sort((a, b) => sort === "name" ? a.name.localeCompare(b.name) : sort === "team" ? T.indexOf(a.team) - T.indexOf(b.team) : (b.lastActive || "0").localeCompare(a.lastActive || "0"));
     $("rows").innerHTML = r.map((b) => [esc(b.name), esc(b.team), esc(b.role), esc(b.work), fmt(b.lastActive), pill(b.status)]
       .map((c, i) => `<td data-label="${cols[i]}">${c}</td>`).join("")).map((x) => `<tr>${x}</tr>`).join("");
@@ -70,8 +87,8 @@
   $("diagram").style.color = getComputedStyle(document.documentElement).getPropertyValue("--muted");
   $("caption").textContent = D.diagram.caption;
 
-  $("teams").innerHTML = T.map((t) => `<div class="card"><h3>${esc(t)}</h3><ul>${B.filter((b) => b.team === t && b.highlight)
-    .map((b) => `<li><b>${esc(b.name)}</b> ${b.status === "Active" ? pill("Active") : pill(b.status)}<br>${esc(b.highlight)}</li>`).join("")}</ul></div>`).join("");
-  $("idea-list").innerHTML = D.ideas.map((i) => `<li><b>${esc(i.title)}</b> — ${esc(i.detail)}</li>`).join("");
-  $("tip").textContent = D.tip;
+  $("teams").innerHTML = T.map((t) => `<div class="card"><h3>${esc(t)}</h3><ul>${B.filter((b) => b.team === t)
+    .map((b) => `<li><b>${esc(b.name)}</b> ${pill(b.status)}<br>${esc(b.work)}</li>`).join("")}</ul></div>`).join("");
+  const tip = $("tip");
+  if (tip) tip.textContent = D.tip || "";
 })();
